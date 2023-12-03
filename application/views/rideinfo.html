@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rides Information</title>
+  <style>
+    .container {
+      text-align: center;
+      margin-top: 100px;
+    }
+    
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      background-color: white;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+      margin: 5px;
+    }
+    
+    #driver-info,
+    #passenger-info {
+      display: none;
+    }
+    
+    .line {
+      border-left: 1px solid #ccc;
+      height: 250px;
+      display: inline-block;
+      margin: 0 10px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Rides Information</h2>
+    <button class="button" onclick="showDriverInfo()"><img src="driver2.jpg" alt="Driver"  height="150"></button>
+    <div class="line"></div>
+    <button class="button" onclick="showPassengerInfo()"><img src="passen2.jpg" alt="Passenger"  height="150">Rides available</button>
+    
+    <div id="driver-info">
+      <h3>Rides Information:</h3>
+      <p>If you are a driver, you can offer rides to passengers and earn money while traveling to your destination. Be sure to follow local regulations and maintain a safe and comfortable experience for your passengers.</p>
+    </div>
+    
+    <div id="passenger-info">
+      <h3>Rides available:</h3>
+      <p>If you are a passenger, you can find available rides offered by drivers. This is a convenient and cost-effective way to reach your desired destination. Make sure to communicate with the driver and agree on details such as pick-up location, fare, and any specific requirements.</p>
+    </div>
+    
+    <script>
+      function showDriverInfo() {
+        var driverInfo = document.getElementById("driver-info");
+        var passengerInfo = document.getElementById("passenger-info");
+        
+        driverInfo.style.display = "block";
+        passengerInfo.style.display = "none";
+      }
+      
+      function showPassengerInfo() {
+        var driverInfo = document.getElementById("driver-info");
+        var passengerInfo = document.getElementById("passenger-info");
+        
+        driverInfo.style.display = "none";
+        passengerInfo.style.display = "block";
+      }
+    </script>
+  </div>
+</body>
+</html>
