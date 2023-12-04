@@ -1,6 +1,6 @@
 <? $this->load->view('includes/header') ?>
 <!-- End Header -->
-
+<!internal styling -->
   <style>
    .scrolling-images {
       display: flex;
